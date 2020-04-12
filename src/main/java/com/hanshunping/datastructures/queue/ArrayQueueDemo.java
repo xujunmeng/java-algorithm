@@ -128,4 +128,13 @@ class ArrayQueue {
 		}
 		return arr[front + 1];
 	}
+
+	public static void main(String[] args) {
+		ArrayQueue arrayQueue = new ArrayQueue(3);
+		arrayQueue.addQueue(10);
+		arrayQueue.addQueue(20);
+		arrayQueue.addQueue(30);
+		arrayQueue.getQueue();
+		arrayQueue.showQueue();
+	}
 }

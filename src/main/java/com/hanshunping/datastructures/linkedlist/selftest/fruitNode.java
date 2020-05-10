@@ -5,11 +5,11 @@ package com.hanshunping.datastructures.linkedlist.selftest;
  */
 public class FruitNode {
 
-    private Integer no;
+    public Integer no;
 
-    private String name;
+    public String name;
 
-    private FruitNode next;
+    public FruitNode next;
 
     public FruitNode(Integer no, String name) {
         this.no = no;

@@ -1,5 +1,7 @@
 package com.hanshunping.datastructures.linkedlist.selftest;
 
+import java.util.Stack;
+
 /**
  * Created by jgsoft on 2020/5/5.
  */
@@ -28,36 +30,21 @@ public class SingleLinkedList {
         }
     }
 
-    public FruitNode getReverseFruitNode(FruitNode fruitNode) {
-        FruitNode reverseFruitNode = new FruitNode(0, "");
+    public void getReverseFruitNode(FruitNode fruitNode) {
+        FruitNode temp = head;
 
-        FruitNode temp = fruitNode;
+        Stack<FruitNode> stack = new Stack<>();
+        while (temp.next != null) {
+            stack.push(temp.next);
 
-        if (fruitNode.next == null) {
-            System.out.println("链表为空");
-            return null;
-        }
-
-        while (true) {
-            FruitNode tempNextNode = temp.next;
-            if (tempNextNode == null) {
-                break;
-            }
-
-            if (reverseFruitNode.next == null) {
-                FruitNode aa = tempNextNode;
-                aa.next = null;
-                reverseFruitNode.next = aa;
-            } else {
-
-                tempNextNode.next = reverseFruitNode.next.next;
-
-                reverseFruitNode.next = tempNextNode;
-            }
             temp = temp.next;
         }
 
-        return reverseFruitNode;
+        while (!stack.empty()) {
+            System.out.println(stack.pop());
+        }
+
+
     }
 
     public FruitNode getLastKFruitNode(FruitNode fruitNode, int k) {

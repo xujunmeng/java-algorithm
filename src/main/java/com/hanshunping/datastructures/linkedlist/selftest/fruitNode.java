@@ -3,7 +3,7 @@ package com.hanshunping.datastructures.linkedlist.selftest;
 /**
  * Created by jgsoft on 2020/5/5.
  */
-public class fruitNode {
+public class FruitNode {
 
     public Integer no;
 

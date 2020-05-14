@@ -1,4 +1,4 @@
-package com.junmeng.self.stack.链表实现栈数据结构;
+package com.junmeng.self.stack.linked1;
 
 /**
  * Created by jgsoft on 2019/2/25.

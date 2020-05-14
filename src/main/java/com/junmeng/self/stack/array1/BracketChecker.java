@@ -1,4 +1,4 @@
-package com.junmeng.self.stack.数组实现栈数据结构;
+package com.junmeng.self.stack.array1;
 
 /**
  * Created by jgsoft on 2019/2/23.

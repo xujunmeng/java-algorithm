@@ -21,7 +21,11 @@ public class DoubleLinkedList {
         while (true) {
             //如果临时节点的next为空
             if (tempNode.next == null) {
+
                 tempNode.next = penNode;
+
+                penNode.pre = tempNode;
+
                 break;
             }
             //如果临时节点的next不为空
@@ -30,13 +34,70 @@ public class DoubleLinkedList {
     }
 
     /**
+     * 按顺序的添加链表
+     */
+    public void addSort(PenNode penNode) {
+
+        PenNode temp = head;
+
+
+        while (true) {
+            if (temp.next == null) {
+                temp.next = penNode;
+                penNode.pre = temp;
+                break;
+            }
+            if (penNode.no < temp.next.no) {
+
+                penNode.next = temp.next;
+
+                temp.next.pre = penNode;
+
+                penNode.pre = temp;
+
+                temp.next = penNode;
+
+                break;
+            }
+
+            temp = temp.next;
+
+        }
+
+
+    }
+
+
+
+    public void deleteNode(PenNode penNode) {
+        PenNode temp = head.next;
+
+        while (true) {
+            if (temp == null) {
+                System.out.println("not found");
+                break;
+            }
+            if (temp.no.intValue() == penNode.no.intValue()) {
+
+                temp.pre.next = temp.next;
+
+                temp.next.pre = temp.pre;
+
+                break;
+            }
+            temp = temp.next;
+        }
+    }
+
+
+    /**
      * 遍历
      */
     public void getAll() {
         PenNode tempNode = head;
         while (true) {
             if (tempNode == null) {
-                System.out.println("链表为空");
+                System.out.println("linked list empty");
                 break;
             }
             System.out.println(tempNode);

@@ -9,15 +9,17 @@ public class DoubleLinkedListDemo {
     public static void main(String[] args) {
         DoubleLinkedList doubleLinkedList = new DoubleLinkedList();
 
-        PenNode fruitNode1 = new PenNode(1, "苹果");
-        PenNode fruitNode2 = new PenNode(2, "鸭梨");
-        PenNode fruitNode3 = new PenNode(3, "哈密瓜");
-        PenNode fruitNode4 = new PenNode(4, "菠萝");
+        PenNode fruitNode1 = new PenNode(1, "apple");
+        PenNode fruitNode2 = new PenNode(2, "pear");
+        PenNode fruitNode3 = new PenNode(3, "hami");
+        PenNode fruitNode4 = new PenNode(4, "pineapple");
 
-        doubleLinkedList.add(fruitNode1);
-        doubleLinkedList.add(fruitNode2);
-        doubleLinkedList.add(fruitNode3);
-        doubleLinkedList.add(fruitNode4);
+        doubleLinkedList.addSort(fruitNode3);
+        doubleLinkedList.addSort(fruitNode1);
+        doubleLinkedList.addSort(fruitNode4);
+        doubleLinkedList.addSort(fruitNode2);
+
+        doubleLinkedList.deleteNode(fruitNode3);
 
         doubleLinkedList.getAll();
     }

@@ -9,7 +9,7 @@ public class QuickSortTest {
 
     public static void main(String[] args) {
 
-        int[] arr = {-9, 78, 0, 23, -567, 70, -2, -3, -1};
+        int[] arr = {-9, 78, 0, 23, 10, 70, -2, -3, -1};
         quickSort(arr, 0, arr.length - 1);
         System.out.println(Arrays.toString(arr));
     }
@@ -18,7 +18,7 @@ public class QuickSortTest {
     {
         int l = left;//左下标
         int r = right;//右下标
-        int pivot = arr[(l + r) / 2];//pivot 中轴的值
+        int pivot = arr[(l + r) / 2];//pivot 中轴 的 值
 
         //临时变量，作为交换时使用
         int temp;

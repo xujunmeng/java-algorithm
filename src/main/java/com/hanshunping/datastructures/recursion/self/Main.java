@@ -7,10 +7,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-        test(4);
+//        test1(4);
 
-//        int factorial = factorial(3);
-//        System.out.println(factorial);
+        int factorial = factorial(4);
+        System.out.println(factorial);
     }
 
     public static void test(int n) {

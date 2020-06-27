@@ -61,11 +61,10 @@ public class MQueue {
     public static void main(String[] args) {
         MQueue mQueue = new MQueue(3);
         mQueue.add(10);
-        mQueue.showAll();
         mQueue.add(20);
-        mQueue.showAll();
         mQueue.add(30);
-        mQueue.showAll();
+
+        mQueue.out();
 
     }
 

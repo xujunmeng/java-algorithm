@@ -34,11 +34,11 @@ public class GraphDemo {
         graph.showGraph();
 
         //测试一把，dfs遍历是否OK
-        System.out.println("深度遍历");
+//        System.out.println("深度遍历");
 //        graph.dfs();  //A -> B -> C -> D -> E
 
-        System.out.println("广度优先遍历");
-        graph.bfs();
+//        System.out.println("广度优先遍历");
+//        graph.bfs();
 
     }
 

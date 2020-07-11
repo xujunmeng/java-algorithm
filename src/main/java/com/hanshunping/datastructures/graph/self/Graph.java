@@ -39,6 +39,52 @@ public class Graph {
         isVisted = new boolean[n];
     }
 
+    //图，常用的方法
+
+    //插入节点
+    public void insertVertex(String vertex) {
+        vertexList.add(vertex);
+    }
+
+    /**
+     * 添加边
+     * @param v1 第一个顶点对应的下标   表示点的 下标 ，即 第几个顶点
+     * @param v2 第二个顶点对应的下标
+     * @param weight 0 ：没有直接连接 1：有直接连接
+     */
+    public void insertEdge(int v1, int v2, int weight) {
+        edges[v1][v2] = weight;
+        edges[v2][v1] = weight;
+        numOfEdges = numOfEdges + 1;
+    }
+
+    //返回节点的个数
+    public int getNumOfVertex() {
+        return vertexList.size();
+    }
+
+    //返回边的数目
+    public int getNumOfEdges() {
+        return numOfEdges;
+    }
+
+    //返回节点i(下标)对应的数据  0 -> A;  1 -> B; 2 -> C;
+    public String getValueByIndex(int i) {
+        return vertexList.get(i);
+    }
+
+    //返回 v1 和 v2 的权值
+    public int getWeight(int v1, int v2) {
+        return edges[v1][v2];
+    }
+
+    //显示图对应的矩阵
+    public void showGraph() {
+        for (int[] link : edges) {
+            System.out.println(Arrays.toString(link));
+        }
+    }
+
     //得到第一个邻接节点的下标 w
     //返回值是，如果存在就返回对应的下标，否则返回-1
     public int getFirstNeighbor(int index) {
@@ -135,50 +181,5 @@ public class Graph {
     }
 
 
-    //插入节点
-    public void insertVertex(String vertex) {
-        vertexList.add(vertex);
-    }
-
-    /**
-     * 添加边
-     * @param v1 第一个顶点对应的下标   表示点的下标，即 第几个顶点
-     * @param v2 第二个顶点对应的下标
-     * @param weight 0 ：没有直接连接 1：有直接连接
-     */
-    public void insertEdge(int v1, int v2, int weight) {
-        edges[v1][v2] = weight;
-        edges[v2][v1] = weight;
-        numOfEdges = numOfEdges + 1;
-    }
-
-    //图，常用的方法
-
-    //返回节点的个数
-    public int getNumOfVertex() {
-        return vertexList.size();
-    }
-
-    //返回边的数目
-    public int getNumOfEdges() {
-        return numOfEdges;
-    }
-
-    //返回节点i(下标)对应的数据  0 > A;  1 > B; 2 > C;
-    public String getValueByIndex(int i) {
-        return vertexList.get(i);
-    }
-
-    //返回 v1 和 v2 的权值
-    public int getWeight(int v1, int v2) {
-        return edges[v1][v2];
-    }
-
-    //显示图对应的矩阵
-    public void showGraph() {
-        for (int[] link : edges) {
-            System.out.println(Arrays.toString(link));
-        }
-    }
 
 }

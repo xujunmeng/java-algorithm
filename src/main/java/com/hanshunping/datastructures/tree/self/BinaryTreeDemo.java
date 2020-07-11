@@ -32,14 +32,14 @@ public class BinaryTreeDemo {
         //测试
         System.out.println("前序遍历");
         //1 2 3 4
-//        binaryTree.preOrder();
+        binaryTree.preOrder();
 
 //        binaryTree.infixOrder();
 
 //        binaryTree.postOrder();
 
-        HeroNode heroNode = binaryTree.preOrderSearch(5);
-        System.out.println(heroNode);
+//        HeroNode heroNode = binaryTree.preOrderSearch(5);
+//        System.out.println(heroNode);
     }
 
 

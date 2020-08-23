@@ -9,6 +9,13 @@ public class SingleLinkedList {
     public HouseNode head = new HouseNode(0);
 
     /**
+     * 获取头节点
+     */
+    public HouseNode getHeadNode() {
+        return head;
+    }
+
+    /**
      * 添加节点
      * @param houseNode
      */
@@ -41,7 +48,7 @@ public class SingleLinkedList {
         }
 
         int sum = 0;
-        HouseNode tempNode = head;
+        HouseNode tempNode = head.next;
         while(tempNode != null) {
             sum = sum + 1;
             tempNode = tempNode.next;
@@ -61,6 +68,9 @@ public class SingleLinkedList {
             len++;
         }
 
+
+
+
         int idx = len + 1 - k;
         int j = 1;
         HouseNode node = head;
@@ -72,9 +82,119 @@ public class SingleLinkedList {
 
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /**
-     * 单链表的翻转
+     * 查找单链表中倒数第k个节点
      */
+    public HouseNode daoshuKNode(int k) {
+        //获取总节点数
+        int sum = sumNode();
+
+        int m = sum - k;
+
+        HouseNode tempNode = head.next;
+
+        int curr = 1;
+        while (curr <= m) {
+            tempNode = tempNode.next;
+            curr++;
+        }
+        return tempNode;
+    }
+
+
+    /**
+     * 查找单链表中倒数第k个节点
+     */
+    public HouseNode daoshuKNode2(int k) {
+        int sum = sumNode();
+
+        int n = sum - k;
+
+        HouseNode tempNode = head.next;
+        int curr = 1;
+        while (curr <= n) {
+            tempNode = tempNode.next;
+            curr++;
+        }
+        return tempNode;
+    }
+
+
+
+    /**
+     * 单链表的反转
+     */
+    public HouseNode reverse2(HouseNode houseNode) {
+
+        if (houseNode == null || houseNode.next == null) {
+            return houseNode;
+        }
+
+        HouseNode oldNodeNext = houseNode.next;
+
+        HouseNode newNode = reverse2(oldNodeNext);
+
+        oldNodeNext.next = houseNode;
+
+        houseNode.next = null;
+
+        return newNode;
+
+    }
+
+    /**
+     * 判断单链表是否有环
+     */
+    public boolean ring2(HouseNode houseNode) {
+        HouseNode slowNode = houseNode.next;
+
+        HouseNode node = houseNode.next.next;
+
+        while (true) {
+            if (slowNode == null || node == null) {
+                return false;
+            }
+
+            if (slowNode.date == node.date) {
+                return true;
+            }
+            slowNode = slowNode.next;
+            node = node.next.next;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }

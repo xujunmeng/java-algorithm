@@ -34,6 +34,7 @@ public class HouseNode {
     public String toString() {
         return "HouseNode{" +
                 "date=" + date +
+                ", next=" + next +
                 '}';
     }
 }

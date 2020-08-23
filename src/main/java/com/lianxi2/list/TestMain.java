@@ -29,9 +29,19 @@ public class TestMain {
         int i = singleLinkedList.sumNode();
         System.out.println(i);
 
-        HouseNode lastIndexNode = singleLinkedList.findLastIndexNode2(2);
-        System.out.println(lastIndexNode);
+//        HouseNode houseNode = singleLinkedList.findLastIndexNode(3);
+
+//        HouseNode houseNode = singleLinkedList.daoshuKNode2(3);
+//        System.out.println(houseNode);
+//
+//        HouseNode reverseNode = singleLinkedList.reverse2(singleLinkedList.getHeadNode());
+//        System.out.println(reverseNode);
+
+        boolean b = singleLinkedList.ring2(singleLinkedList.getHeadNode());
+        System.out.println(b);
 
     }
+
+
 
 }

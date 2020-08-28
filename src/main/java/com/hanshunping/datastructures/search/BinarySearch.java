@@ -42,10 +42,14 @@ public class BinarySearch {
 		int mid = (left + right) / 2;
 		int midVal = arr[mid];
 
-		if (findVal > midVal) { // Ïò ÓÒµİ¹é
+		if (findVal > midVal) {
+			// Ïò ÓÒµİ¹é
 			return binarySearch(arr, mid + 1, right, findVal);
-		} else if (findVal < midVal) { // Ïò×óµİ¹é
+
+		} else if (findVal < midVal) {
+			// Ïò×óµİ¹é
 			return binarySearch(arr, left, mid - 1, findVal);
+
 		} else {
 			
 			return mid;

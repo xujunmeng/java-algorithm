@@ -6,8 +6,10 @@ public class TestMain {
 
     @Test
     public void testQuickSort() {
-        int[] arr = {-9, 78, 0, 28, -567, 70};
+//        int[] arr = {-9, 78, 0, 28, -567, 70};
 //        int[] arr = {2, 0, 4, 1, 3};
+
+        int[] arr = {8, 7, 3, 0, 15, 12, 30};
 
         quickSort2(arr, 0, arr.length - 1);
 

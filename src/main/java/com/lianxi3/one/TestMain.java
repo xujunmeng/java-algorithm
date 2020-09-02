@@ -3,6 +3,9 @@ package com.lianxi3.one;
 
 import org.junit.Test;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  *
  * 两数之和
@@ -20,7 +23,7 @@ public class TestMain {
         int[] nums = {-1, -2, -3, -4, -5};
         int target = -8;
 
-        int[] ints = twoSum(nums, target);
+        int[] ints = twoSumHash2(nums, target);
 
         System.out.println(ints);
     }
@@ -46,5 +49,63 @@ public class TestMain {
         return result;
 
     }
+
+    public int[] twoSumHash(int[] nums, int target) {
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            int complement = target - nums[i];
+            if (map.containsKey(complement)) {
+                return new int[]{map.get(complement), i};
+            }
+            map.put(nums[i], i);
+        }
+        return null;
+    }
+
+
+    /**
+     * int[] nums = {-1, -2, -3, -4, -5};
+     * int target = -8;
+     * @param nums
+     * @param target
+     * @return
+     */
+    public int[] twoSumHash2(int[] nums, int target) {
+        Map<Integer, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < nums.length; i++) {
+            int leaveInt = target - nums[i];
+
+            if (map.containsKey(leaveInt)) {
+                return new int[]{map.get(leaveInt), i};
+            }
+            map.put(nums[i], i);
+        }
+        return null;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }

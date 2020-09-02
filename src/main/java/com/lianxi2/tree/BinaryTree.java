@@ -33,6 +33,14 @@ public class BinaryTree {
         this.root.preOrder();
     }
 
+    //中序遍历
+    public void midOrder() {
+        if (root == null) {
+            System.out.println("空的");
+        }
+        this.root.midOrder();
+    }
+
     //前序遍历查找
     public HeroNode preOrderSearch(int no) {
         if (root == null) {

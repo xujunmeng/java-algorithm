@@ -97,6 +97,21 @@ public class HeroNode {
         }
     }
 
+    //中序遍历的方法
+    public void midOrder() {
+
+        //递归左子树
+        if (this.left != null) {
+            this.left.midOrder();
+        }
+        //先输出父节点
+        System.out.println(this);
+        //递归右子树
+        if (this.right != null) {
+            this.right.midOrder();
+        }
+    }
+
     //编写前序遍历查找
     public HeroNode preOrderSearch(int no) {
         //比较当前节点是不是

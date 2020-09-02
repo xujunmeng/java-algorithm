@@ -30,10 +30,12 @@ public class TestMain {
 
 //        binaryTree.delNode(6);
 
-        binaryTree.preOrder();
+//        binaryTree.preOrder();
 
-        HeroNode heroNode = binaryTree.preOrderSearch(5);
-        System.out.println(heroNode);
+        binaryTree.midOrder();
+
+//        HeroNode heroNode = binaryTree.preOrderSearch(5);
+//        System.out.println(heroNode);
 
 
     }
